@@ -1,0 +1,167 @@
+$green-dark: #9fb8ad;
+$green-light: #c5d7bd;
+$blue-dark: #383e56;
+$orange: #fb743e;
+$bd-color: #d4d4d4;
+
+.header {
+    &__wrap {
+        background-color: $green-dark;
+        background-image: url(../img/gold-key.jpg);
+        background-attachment: fixed;
+        object-fit: fill;
+        min-height: 100vh;
+        position: relative;
+        z-index: 10;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #fff, $alpha: 0.7);
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: $blue-dark;
+            padding: 15px 0;
+
+            &-brand {
+                padding-right: 70px;
+                padding-left: 20px;
+
+                img {
+                    width: 120px;
+                }
+            }
+
+            .nav-link {
+                color: #fff;
+                padding: 10px;
+                border-bottom: 4px solid transparent;
+                border-radius: 1px;
+                transition: all 0.3s ease-in;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    border-color: $orange;
+                }
+            }
+
+            .dropdown-menu {
+                font-size: inherit;
+
+                .dropdown-item:hover,
+                .dropdown-item:focus {
+                    background-color: $green-dark;
+                }
+            }
+        }
+    }
+
+    &__open-hc {
+        height: 500px;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: all 1s ease-in;
+
+        .i-middle {
+            height: 100%;
+        }
+
+        .header__left-i,
+        .header__right-i {
+            transform: scale(0);
+            transform-origin: right center;
+            transition: all 0.5s ease-in;
+            &.character-fadeIn {
+                transform: scale(1);
+            }
+        }
+
+        .header__right-i {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 44%;
+            transform-origin: left center;
+
+            img {
+                height: 40%;
+                margin-top: 50px;
+            }
+
+            .i-top {
+                transform: rotate(55deg);
+            }
+        }
+
+        .header__left-i {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -10%;
+
+            img {
+                height: 40%;
+                margin-top: 50px;
+            }
+
+            .i-top {
+                transform: rotate(-25deg);
+            }
+        }
+    }
+
+    &__entry {
+        border-radius: 10px;
+        padding: 50px 15px;
+        margin-top: 100px;
+
+        .header__title {
+            color: $orange;
+            font-size: 4.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .header__text {
+            font-size: 3.2rem;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 15px 20px;
+            font-size: 1.8rem;
+            transition: all 1s ease-in;
+        }
+    }
+
+    .form-control,
+    .form-select {
+        font-size: inherit;
+    }
+
+    &__form {
+        padding: 0 30px;
+        font-size: inherit;
+        transition: all 1s ease-in;
+
+        .btn {
+            font-size: 1.6rem;
+            margin-top: 20px;
+        }
+    }
+}

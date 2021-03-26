@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&display=swap");
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+$green-dark: #9fb8ad;
+$green-light: #c5d7bd;
+$blue-dark: #383e56;
+$orange: #fb743e;
+$bd-color: #d4d4d4;
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    color: $blue-dark;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.btn-primary {
+    color: #fff;
+    border-width: 4px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+    }
+}
+
+.history {
+    background-color: #65c69b;
+    background-image: url(../img/bg-hist.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 10px;
+    color: #fff;
+
+    &__title {
+        margin-bottom: 50px;
+
+        img {
+            height: 120px;
+        }
+    }
+
+    &__story {
+        line-height: 2;
+        font-size: 2rem;
+        text-align: left;
+        text-indent: 35px;
+    }
+}
+
+.pupils {
+    padding: 60px 10px;
+background-color: #e0e1e2;
+background-image: url(../img/bg-group.jpg);
+
+    &__group{
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 70px;
+
+        img {
+            height: 80px;
+        }
+    }
+
+    &__description{
+        padding: 0 15px;
+
+        .group-title{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+    }
+
+    .swiper-container {
+        width: 100%;
+        padding-bottom: 50px;
+
+        .swiper-pagination-bullet-active {
+            background-color: $orange;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 45px;
+            transition: all 0.3s ease-in;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.3);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__carusel {
+        height: 400px;
+        position: relative;
+    }
+
+    &__img {
+        position: relative;
+        height: 300px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+        }
+    }
+}
