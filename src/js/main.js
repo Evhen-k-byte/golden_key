@@ -17,26 +17,65 @@
 
 //= scripts.js
 
-const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    speed: 400,
-    slidesPerView: 2,
-      spaceBetween: 20,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+const swiper = new Swiper(".swiper-groop-1", {
+  // Optional parameters
+  loop: true,
+  speed: 400,
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+
+});
+
+const swiper2 = new Swiper(".swiper-groop-2", {
+  // Optional parameters
+  loop: true,
+  speed: 400,
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".button-next-2",
+    prevEl: ".button-prev-2",
+  },
+
+
+});
+
+const swiperDays = new Swiper(".swiper-days", {
+  // Optional parameters
+  loop: true,
+  speed: 400,
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+});
+
+

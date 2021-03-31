@@ -6,6 +6,7 @@ html {
 
 $green-dark: #9fb8ad;
 $green-light: #c5d7bd;
+$green-bg: #65c69b;
 $blue-dark: #383e56;
 $orange: #fb743e;
 $bd-color: #d4d4d4;
@@ -21,11 +22,24 @@ body {
 }
 
 .fadeOut {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .fadeIn {
-    opacity: 1;
+    opacity: 1 !important;
+}
+
+.z-ind-0 {
+    z-index: -1;
+    opacity: 0 !important;
+}
+
+.title-img {
+    height: 70px;
+}
+
+.title {
+    margin-bottom: 70px;
 }
 
 .btn-primary {
@@ -39,21 +53,19 @@ body {
     }
 }
 
+.swiper-container {
+    .swiper-pagination-bullet-active {
+        background-color: $orange !important;
+    }
+}
+
 .history {
-    background-color: #65c69b;
+    background-color: $green-bg;
     background-image: url(../img/bg-hist.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 10px;
     color: #fff;
-
-    &__title {
-        margin-bottom: 50px;
-
-        img {
-            height: 120px;
-        }
-    }
 
     &__story {
         line-height: 2;
@@ -64,26 +76,20 @@ body {
 }
 
 .pupils {
-    padding: 60px 10px;
-background-color: #e0e1e2;
-background-image: url(../img/bg-group.jpg);
+    padding: 60px 10px 1px;
+    background-color: #e0e1e2;
+    background-image: url(../img/bg-group.jpg);
+    background-attachment: fixed;
+    object-fit: fill;
 
-    &__group{
+    &__group {
         margin-bottom: 30px;
     }
 
-    &__title {
-        margin-bottom: 70px;
-
-        img {
-            height: 80px;
-        }
-    }
-
-    &__description{
+    &__description {
         padding: 0 15px;
 
-        .group-title{
+        .group-title {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 30px;
@@ -92,15 +98,19 @@ background-image: url(../img/bg-group.jpg);
 
     .swiper-container {
         width: 100%;
-        padding-bottom: 50px;
+        height: 85%;
+    }
 
-        .swiper-pagination-bullet-active {
-            background-color: $orange;
-        }
+    &__carusel {
+        height: 400px;
+        position: relative;
 
-        .swiper-button-prev,
-        .swiper-button-next {
+        .button-prev,
+        .button-next,
+        .button-prev-2,
+        .button-next-2 {
             width: 45px;
+            margin: -80px 30px 0 30px;
             transition: all 0.3s ease-in;
 
             &:hover,
@@ -111,16 +121,7 @@ background-image: url(../img/bg-group.jpg);
             img {
                 width: 100%;
             }
-
-            &::after {
-                display: none;
-            }
         }
-    }
-
-    &__carusel {
-        height: 400px;
-        position: relative;
     }
 
     &__img {
@@ -133,6 +134,166 @@ background-image: url(../img/bg-group.jpg);
             left: 50%;
             transform: translate(-50%, -50%);
             height: 100%;
+        }
+    }
+}
+
+.studying {
+    background-color: $green-bg;
+    background-image: url(../img/studing-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 10px;
+    color: #fff;
+
+    &__reception {
+        font-size: 2.2rem;
+
+        .studying__hour {
+            background-color: $orange;
+            font-weight: 700;
+            padding: 4px;
+            border-radius: 10px;
+        }
+    }
+
+    .day {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 2px 2px 2px rgba($color: $blue-dark, $alpha: 0.8);
+        font-size: 2.4rem;
+        padding: 20px;
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        transition: all 0.5s ease-in;
+
+        &__title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin-bottom: 40px;
+            color: rgba($color: $orange, $alpha: 0.7);
+            text-shadow: 2px 2px 2px rgba($color: #000, $alpha: 0.8);
+        }
+
+        &__lessons {
+            position: relative;
+            z-index: 10;
+        }
+
+        &__attr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            z-index: 1;
+            transition: all 0.3s ease-in;
+
+            &:nth-child(3) {
+                top: 100px;
+                left: 60px;
+            }
+
+            &:nth-child(4) {
+                top: 250px;
+                left: 220px;
+            }
+
+            &:nth-child(5) {
+                top: 175px;
+                left: 595px;
+            }
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: 10%;
+        width: 45px;
+        transition: all 0.3s ease-in;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.3);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .swiper-button-next {
+        left: inherit;
+        right: 10%;
+    }
+}
+
+.our-team {
+    padding: 60px 10px 1px;
+    background-color: #e0e1e2;
+    background-image: url(../img/team-bg.jpg);
+    background-attachment: fixed;
+    object-fit: fill;
+
+    &__people {
+        .person {
+            overflow: hidden;
+
+            &__img {
+                padding-top: 120%;
+                border-radius: 15px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 10px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                img {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                }
+
+                .person__info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: $green-dark, $alpha: 0.9);
+                    color: #fff;
+                    font-size: 1.2rem;
+                    line-height: 1.7;
+                    padding: 15px;
+                    opacity: 1;
+                    transition: all 0.5s ease-in;
+                }
+            }
+
+            &__name{
+                font-weight: 700;
+            }
+
+            &__position{
+                font-style: italic;
+            }
         }
     }
 }

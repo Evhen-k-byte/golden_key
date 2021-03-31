@@ -145,7 +145,7 @@ $bd-color: #d4d4d4;
         .btn {
             padding: 15px 20px;
             font-size: 1.8rem;
-            transition: all 1s ease-in;
+            transition: all .3s ease-in;
         }
     }
 
@@ -161,7 +161,7 @@ $bd-color: #d4d4d4;
 
         .btn {
             font-size: 1.6rem;
-            margin-top: 20px;
+            margin: 20px 20px 0 0;
         }
     }
 }
