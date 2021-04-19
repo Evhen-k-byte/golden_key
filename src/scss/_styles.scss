@@ -36,7 +36,13 @@ body {
 
 .title-img {
     height: 70px;
+
+    &--big{
+        height: 120px;
+    }
 }
+
+
 
 .title {
     margin-bottom: 70px;
@@ -148,6 +154,8 @@ body {
 
     &__reception {
         font-size: 2.2rem;
+        text-shadow: 2px 2px 2px #000;
+
 
         .studying__hour {
             background-color: $orange;
@@ -294,6 +302,30 @@ body {
             &__position{
                 font-style: italic;
             }
+        }
+    }
+}
+
+
+.rules{
+    padding: 60px 15px;
+    background-color: $green-bg;
+    background-image: url(../img/requirement-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    &__items{
+        margin: 20px 0; 
+
+        p{
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        ul{
+      margin: 20px 0 0 30px;
         }
     }
 }

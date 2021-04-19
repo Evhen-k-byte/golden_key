@@ -1,0 +1,36 @@
+
+$green-dark: #9fb8ad;
+$green-light: #c5d7bd;
+$green-bg: #65c69b;
+$blue-dark: #383e56;
+$orange: #fb743e;
+$bd-color: #d4d4d4;
+
+.footer{
+    background-color: $blue-dark;
+    padding: 20px 0;
+
+    &__logo{
+        display: block;
+
+        img{
+            display: inline-block;
+            width: 100px;
+        }
+    }
+
+    .container-fluid{
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    &__contact {
+justify-content: center;
+    }
+
+    &__link{
+        padding: 10px;
+        margin: 0 20px;
+    }
+}
